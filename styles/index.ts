@@ -3,7 +3,7 @@ import {createTheme} from "@mui/system";
 
 export default createTheme({
   palette: {
-    gggg: {
+    classic: {
       main: purple[500]
     },
   },
