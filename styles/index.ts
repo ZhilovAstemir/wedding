@@ -4,7 +4,24 @@ import {createTheme} from "@mui/system";
 export default createTheme({
   palette: {
     classic: {
-      main: purple[500]
+      main: purple[500],
+      background: "#",
+    },
+    aquarell: {
+      main: purple[500],
+      background: "#"
+    },
+    gold: {
+      main: purple[500],
+      background: "#"
+    },
+    blackAndWhite: {
+      main: purple[500],
+      background: "#"
+    },
+    modern: {
+      main: purple[500],
+      background: "#"
     },
   },
 });

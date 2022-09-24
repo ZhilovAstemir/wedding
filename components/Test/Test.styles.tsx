@@ -16,7 +16,7 @@ export const StyledMain = styled('main')(({ theme }) => ({
     color: "#322918",
   },
 
-  ".abbreviation": {
+  "& .abbreviation": {
     margin: "0",
   },
 
