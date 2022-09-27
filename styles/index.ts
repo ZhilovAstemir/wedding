@@ -6,7 +6,7 @@ export default createTheme({
   palette: {
     classic: {
       main: "#322918",
-      background: "#",
+      background: "#ECE3DC",
       fontFamily: "Playfair Display",
     },
     aquarell: {

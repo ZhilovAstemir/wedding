@@ -5,7 +5,7 @@ import "@fontsource/playfair-display";
 export const StyledMain = styled('main')(({theme}) => ({
   color: theme.palette.classic.main,
   fontFamily: theme.palette.classic.fontFamily,
-  background: "#ECE3DC",
+  background: theme.palette.classic.background,
 
   "& .header": {
     width: "100%",
@@ -21,7 +21,7 @@ export const StyledMain = styled('main')(({theme}) => ({
   "& .abbreviation": {
     margin: "0",
     fontWeight: "400",
-    LineHeight:"25px",
+    LineHeight: "25px",
     letterSpacing: "0",
     fontSize: "25px",
     marginBottom: "0",
@@ -113,6 +113,7 @@ export const StyledMain = styled('main')(({theme}) => ({
     fontStyle: "italic",
     fontSize: "30px",
     fontWeight: "400",
+    lineHeight: "30px"
   },
 
   "& .news": {
@@ -148,7 +149,7 @@ export const StyledMain = styled('main')(({theme}) => ({
     fontWeight: "400",
   },
 
-//  ========================= WELCOME =======================
+//  ========================= PLAN =======================
 
   "& .plan": {
     display: "flex",
@@ -199,9 +200,49 @@ export const StyledMain = styled('main')(({theme}) => ({
     margin: "0",
     padding: "0",
     fontWeight: "400",
-    alignSelf: "end"
-  }
+    alignSelf: "end",
+  },
 
+//  ========================= PLACE =======================
+
+  "& .place": {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    padding: "40px",
+  },
+
+  "& .place > h1": {
+    fontSize: "30px",
+    fontWeight: "400",
+    textAlign: "center",
+    lineHeight: "30px"
+  },
+
+  "& .place_img": {
+    height: "160px",
+    width: "160px",
+    background: "#fff",
+  },
+
+  "& .place > p": {
+    fontSize: "15px",
+    textAlign: "center",
+    fontStyle: "italic",
+  },
+
+  "& .place > button": {
+    background: "transparent",
+    border: "none",
+    outline: "none",
+    fontSize: "10px",
+    letterSpacing: "20%",
+  },
+
+  "& .place > hr": {
+    marginTop: "5px",
+    width: "141px",
+  }
 
 
 

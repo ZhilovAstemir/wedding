@@ -67,6 +67,13 @@ const TestComponent = () => {
           </div>
         </div>
       </section>
+      <section className="place">
+        <h1>Место <i>проведения:</i></h1>
+        <div className="place_img"></div>
+        <p>Банкетный зал Ридада (старая), ул. 2-й Таманской Дивизии, 7, курортный посёлок Вольный Аул</p>
+        <button>построить маршрут</button>
+        <hr/>
+      </section>
     </StyledMain>
   );
  }
