@@ -5,7 +5,7 @@ const TestComponent = () => {
   return (
     <StyledMain>
       <section className="header">
-        <h1 className="abbreviation">A & A</h1>
+        <h1 className="abbreviation">A&A</h1>
         <hr/>
         <div className="main_container">
           <h2 className="names">Арсен и Айна</h2>
@@ -41,6 +41,31 @@ const TestComponent = () => {
         <h2>Мы женимся!</h2>
         <h4>Мы очень хотим разделить с вами этот счастливый праздник.</h4>
         <h5>Ждём вас на нашей свадьбе! Начало в 17:00</h5>
+      </section>
+      <section className="plan">
+        <h1>План <i>мероприятия:</i></h1>
+        <div className="plan_flex">
+          <div>
+            <p>17:00</p>
+            <hr/>
+            <h6>сбор гостей</h6>
+          </div>
+          <div>
+            <p>18:00</p>
+            <hr/>
+            <h6>вывод гостей</h6>
+          </div>
+          <div>
+            <p>19:00</p>
+            <hr/>
+            <h6>показ жениха</h6>
+          </div>
+          <div>
+            <p>20:00</p>
+            <hr/>
+            <h6>дискотека</h6>
+          </div>
+        </div>
       </section>
     </StyledMain>
   );

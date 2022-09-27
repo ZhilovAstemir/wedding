@@ -1,5 +1,6 @@
 import {styled} from "@mui/system";
 import {rotate} from "next/dist/server/lib/squoosh/impl";
+import "@fontsource/playfair-display";
 
 export const StyledMain = styled('main')(({theme}) => ({
   color: theme.palette.classic.main,
@@ -19,15 +20,22 @@ export const StyledMain = styled('main')(({theme}) => ({
 
   "& .abbreviation": {
     margin: "0",
+    fontWeight: "400",
+    LineHeight:"25px",
+    letterSpacing: "0",
+    fontSize: "25px",
+    marginBottom: "0",
   },
 
   "& .header > hr": {
     width: "49px",
+    marginTop: "0",
   },
 
   "& .names": {
     fontSize: "35px",
-    margin: "148px 0 0 0"
+    margin: "148px 0 0 0",
+    fontWeight: "400",
   },
 
   "& .flex_container": {
@@ -41,6 +49,7 @@ export const StyledMain = styled('main')(({theme}) => ({
   "& .flex_container > h5": {
     margin: "0 15px",
     fontSize: "35px",
+    fontWeight: "400",
   },
 
   "& .main_container > hr": {
@@ -138,5 +147,62 @@ export const StyledMain = styled('main')(({theme}) => ({
     fontStyle: "italic",
     fontWeight: "400",
   },
+
+//  ========================= WELCOME =======================
+
+  "& .plan": {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    lineHeight: "30px",
+  },
+
+  "& .plan > h1": {
+    marginBottom: "0",
+    padding: "0 20px 0 20px",
+    textAlign: "center",
+    fontSize: "30px",
+    fontWeight: "400",
+  },
+
+  "& .plan_flex": {
+    marginTop: "24px",
+    gap: "25px",
+    height: "100%",
+    marginBottom: "175px"
+  },
+
+  "& .plan_flex > div": {
+    display: "flex",
+    margin: "0",
+    padding: "0",
+    gap: "5px",
+    fontWeight: "400",
+  },
+
+  "& .plan_flex hr": {
+    height: "25px",
+    alignCenter: "center",
+    transform: "rotate(15deg)",
+    marginLeft: "15px",
+    marginRight: "6px"
+  },
+
+  "& .plan_flex p": {
+    margin: "0",
+    padding: "0",
+    fontWeight: "400",
+    fontSize: "25px",
+  },
+
+  "& .plan_flex h6": {
+    margin: "0",
+    padding: "0",
+    fontWeight: "400",
+    alignSelf: "end"
+  }
+
+
+
 
 }));
