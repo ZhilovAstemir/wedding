@@ -1,9 +1,13 @@
-import {memo, useMemo} from "react";
+import {memo, useMemo, useState} from "react";
+import * as React from 'react';
 import {StyledMain} from "./Test.styles";
 import clsx from "clsx";
-import InputMask from "react-input-mask";
-
 import {SubmitHandler, useForm, Controller} from "react-hook-form";
+import Box from '@mui/material/Box';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select, { SelectChangeEvent } from '@mui/material/Select';
 
 interface IFormInput {
   question: string;
@@ -12,7 +16,7 @@ interface IFormInput {
 }
 
 const TestComponent = () => {
-
+  const [option, setOption] = React.useState('');
   const { register, control, handleSubmit, formState } = useForm<IFormInput>();
 
   const errors = useMemo(
@@ -22,6 +26,10 @@ const TestComponent = () => {
 
   const onSubmit: SubmitHandler<IFormInput> = (data) => {
     console.log(data);
+  };
+
+  const handleChange = (event: SelectChangeEvent) => {
+    setOption(event.target.value as string);
   };
 
   return (
@@ -91,50 +99,62 @@ const TestComponent = () => {
         </section>
         <section className="place">
           <h1>Место <i>проведения:</i></h1>
-          <div className="place_img"></div>
+          <div className="place_img">
+
+          </div>
           <p>Банкетный зал Ридада (старая), ул. 2-й Таманской Дивизии, 7, курортный посёлок Вольный Аул</p>
           <button>построить маршрут</button>
           <hr/>
         </section>
         <section className="confirm">
           <h1>Подтвердите, <i>пожалуйста</i>, ваше присутсвие</h1>
-          <form className={} onSubmit={handleSubmit(onSubmit)}>
-            <p className={}>Бесплатная консультация</p>
+          <form onSubmit={handleSubmit(onSubmit)}>
             <input
                 {...register("question", { required: true, minLength: 10 })}
                 className={clsx( errors.question)}
                 type="text"
-                placeholder="Вопрос"
+                placeholder="Имя"
             />
             <input
                 {...register("name", { required: true, minLength: 2 })}
                 className={clsx(errors.name)}
                 type="text"
-                placeholder="Имя"
+                placeholder="Фамилия"
             />
-            <Controller
-                name="phone"
-                control={control}
-                render={({ field }) => (
-                    <InputMask
-                        {...field}
-                        mask="+7 (999) 999-99-99"
-                        maskPlaceholder="="
-                        className={clsx(errors.phone)}
-                        type="tel"
-                        placeholder="Телефон"
-                    />
-                )}
+            <Box sx={{ minWidth: 120 }}>
+              <FormControl fullWidth>
+                <InputLabel id="demo-simple-select-label">Option</InputLabel>
+                <Select
+                    labelId="demo-simple-select-label"
+                    id="demo-simple-select"
+                    value={option}
+                    label=""
+                    onChange={handleChange}
+                >
+                  <MenuItem value={"Обязательно буду"}>Обязательно буду</MenuItem>
+                  <MenuItem value={"Обязательно буду"}>Обязательно буду</MenuItem>
+                  <MenuItem value={"Обязательно буду"}>Обязательно буду</MenuItem>
+                </Select>
+              </FormControl>
+            </Box>
+            <input
+                {...register("name", { required: true, minLength: 2 })}
+                className={clsx(errors.name)}
+                type="text"
+                placeholder="С кем вы придете?"
             />
+            <input
+                {...register("name", { required: true, minLength: 2 })}
+                className={clsx(errors.name)}
+                type="text"
+                placeholder="Будут ли с вами дети?"
+            />
+
             <button
-                className={}
                 type="submit"
             >
               Получить
             </button>
-            <p className={}>
-              Нажимая кнопку «Получить», Вы соглашаетесь с <a href="">политикой конфиденциальности</a>
-            </p>
           </form>
         </section>
       </StyledMain>

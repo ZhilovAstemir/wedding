@@ -242,7 +242,5 @@ export const StyledMain = styled('main')(({theme}) => ({
   "& .place > hr": {
     marginTop: "5px",
     width: "141px",
-  }
-
-
+  },
 }));
