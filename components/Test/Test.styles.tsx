@@ -245,5 +245,4 @@ export const StyledMain = styled('main')(({theme}) => ({
   }
 
 
-
 }));
