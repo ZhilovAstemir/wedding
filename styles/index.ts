@@ -4,8 +4,9 @@ import {createTheme} from "@mui/system";
 export default createTheme({
   palette: {
     classic: {
-      main: purple[500],
+      main: "#322918",
       background: "#",
+      fontFamily: "Playfair Display",
     },
     aquarell: {
       main: purple[500],

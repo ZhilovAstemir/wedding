@@ -35,7 +35,13 @@ const TestComponent = () => {
           </div>
         </div>
       </section>
-
+      <section className="welcome">
+        <h1 className="welcomeTitle">Дорогие друзья и родный!</h1>
+        <p className="news">Вы оказались здесь, а значит мы спешим сообщить вам важную новость!</p>
+        <h2>Мы женимся!</h2>
+        <h4>Мы очень хотим разделить с вами этот счастливый праздник.</h4>
+        <h5>Ждём вас на нашей свадьбе! Начало в 17:00</h5>
+      </section>
     </StyledMain>
   );
  }
