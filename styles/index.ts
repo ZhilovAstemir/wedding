@@ -7,7 +7,7 @@ export default createTheme({
     classic: {
       main: "#322918",
       background: "#ECE3DC",
-      fontFamily: "Playfair Display",
+      fontFamily: "playfair",
     },
     aquarell: {
       main: purple[500],

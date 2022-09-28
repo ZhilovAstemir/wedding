@@ -1,5 +1,4 @@
 import {styled} from "@mui/system";
-import {rotate} from "next/dist/server/lib/squoosh/impl";
 import "@fontsource/playfair-display";
 
 export const StyledMain = styled('main')(({theme}) => ({
@@ -13,8 +12,8 @@ export const StyledMain = styled('main')(({theme}) => ({
     justifyContent: "center",
     alignCenter: "center",
     flexDirection: "column",
-    fontFamily: "Pla",
     textAlign: "center",
+    fontFamily: "playfair",
     padding: "20px",
   },
 
@@ -243,4 +242,18 @@ export const StyledMain = styled('main')(({theme}) => ({
     marginTop: "5px",
     width: "141px",
   },
+//  =============================== CONFIRM =======================
+
+  "& .confirm": {
+    display: "flex",
+    flexDirection: "column",
+    padding: "40px"
+  },
+
+
+
+
+
 }));
+
+

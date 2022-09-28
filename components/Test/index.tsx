@@ -1,22 +1,18 @@
-import {memo, useMemo, useState} from "react";
-import * as React from 'react';
+import * as React from "react";
+import {memo, useMemo} from "react";
 import {StyledMain} from "./Test.styles";
 import clsx from "clsx";
-import {SubmitHandler, useForm, Controller} from "react-hook-form";
-import Box from '@mui/material/Box';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select, { SelectChangeEvent } from '@mui/material/Select';
+import {SubmitHandler, useForm} from "react-hook-form";
+import {SelectChangeEvent} from '@mui/material/Select';
+import {FormControl, InputLabel, MenuItem, Select} from "@mui/material";
 
 interface IFormInput {
   question: string;
   name: string;
-  phone: string;
+  answer: string;
 }
 
 const TestComponent = () => {
-  const [option, setOption] = React.useState('');
   const { register, control, handleSubmit, formState } = useForm<IFormInput>();
 
   const errors = useMemo(
@@ -26,10 +22,6 @@ const TestComponent = () => {
 
   const onSubmit: SubmitHandler<IFormInput> = (data) => {
     console.log(data);
-  };
-
-  const handleChange = (event: SelectChangeEvent) => {
-    setOption(event.target.value as string);
   };
 
   return (
@@ -121,22 +113,11 @@ const TestComponent = () => {
                 type="text"
                 placeholder="Фамилия"
             />
-            <Box sx={{ minWidth: 120 }}>
-              <FormControl fullWidth>
-                <InputLabel id="demo-simple-select-label">Option</InputLabel>
-                <Select
-                    labelId="demo-simple-select-label"
-                    id="demo-simple-select"
-                    value={option}
-                    label=""
-                    onChange={handleChange}
-                >
-                  <MenuItem value={"Обязательно буду"}>Обязательно буду</MenuItem>
-                  <MenuItem value={"Обязательно буду"}>Обязательно буду</MenuItem>
-                  <MenuItem value={"Обязательно буду"}>Обязательно буду</MenuItem>
-                </Select>
-              </FormControl>
-            </Box>
+            <select {...register("answer")}>
+              <option value="Обязательно буду">Обязательно буду</option>
+              <option value="Возможно">Возможно</option>
+              <option value="Не приду">Не приду</option>
+            </select>
             <input
                 {...register("name", { required: true, minLength: 2 })}
                 className={clsx(errors.name)}
@@ -149,7 +130,6 @@ const TestComponent = () => {
                 type="text"
                 placeholder="Будут ли с вами дети?"
             />
-
             <button
                 type="submit"
             >
