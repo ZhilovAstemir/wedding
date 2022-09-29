@@ -7,13 +7,13 @@ import {SelectChangeEvent} from '@mui/material/Select';
 import {FormControl, InputLabel, MenuItem, Select} from "@mui/material";
 
 interface IFormInput {
-  question: string;
   name: string;
+  lastName: string;
   answer: string;
 }
 
 const TestComponent = () => {
-  const { register, control, handleSubmit, formState } = useForm<IFormInput>();
+  const {register, control, handleSubmit, formState} = useForm<IFormInput>();
 
   const errors = useMemo(
       () => formState.errors,
@@ -102,14 +102,14 @@ const TestComponent = () => {
           <h1>Подтвердите, <i>пожалуйста</i>, ваше присутсвие</h1>
           <form onSubmit={handleSubmit(onSubmit)}>
             <input
-                {...register("question", { required: true, minLength: 10 })}
-                className={clsx( errors.question)}
+                {...register("name", {required: true, minLength: 10})}
+                className={clsx(errors.name)}
                 type="text"
                 placeholder="Имя"
             />
             <input
-                {...register("name", { required: true, minLength: 2 })}
-                className={clsx(errors.name)}
+                {...register("lastName", {required: true, minLength: 2})}
+                className={clsx(errors.lastName)}
                 type="text"
                 placeholder="Фамилия"
             />
@@ -119,22 +119,21 @@ const TestComponent = () => {
               <option value="Не приду">Не приду</option>
             </select>
             <input
-                {...register("name", { required: true, minLength: 2 })}
+                {...register("name", {required: true, minLength: 2})}
                 className={clsx(errors.name)}
                 type="text"
                 placeholder="С кем вы придете?"
             />
             <input
-                {...register("name", { required: true, minLength: 2 })}
+                {...register("name", {required: true, minLength: 2})}
                 className={clsx(errors.name)}
                 type="text"
                 placeholder="Будут ли с вами дети?"
             />
-            <button
-                type="submit"
-            >
-              Получить
+            <button type="submit">
+              ОТПРАВИТЬ
             </button>
+            <hr/>
           </form>
         </section>
       </StyledMain>

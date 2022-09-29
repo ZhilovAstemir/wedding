@@ -250,10 +250,52 @@ export const StyledMain = styled('main')(({theme}) => ({
     padding: "40px"
   },
 
+  "& .confirm > h1": {
+    textAlign: "center",
+    fontWeight: "400",
+    lineHeight: "30px",
+  },
 
+  "& form": {
+    display: "flex",
+    flexDirection: "column",
+    gap: "22px",
+  },
 
+  "& form > input": {
+    background: "transparent",
+    outline: "none",
+    border: "none",
+    textAlign: "center",
+    borderBottom: "1px solid grey",
+    textTransform: "uppercase",
+    fontSize: "10px"
 
+  },
 
+  "& form > select": {
+    background: "transparent",
+    outline: "none",
+    border: "none",
+    textAlign: "center",
+    borderBottom: "1px solid grey",
+    textTransform: "uppercase",
+    fontSize: "10px"
+  },
+
+  "& form > button": {
+    background: "transparent",
+    outline: "none",
+    marginTop: "50px",
+    border: "none",
+    textAlign: "center",
+    borderBottom: "1px solid grey",
+    width: "70%",
+    fontSize: "10px",
+    alignSelf: "center",
+    padding: "10px",
+    cursor: "pointer"
+  },
 }));
 
 
