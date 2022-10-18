@@ -1,13 +1,19 @@
-import {configureStore, createSlice, ThunkAction} from '@reduxjs/toolkit';
-import {Action} from 'redux';
-import {createWrapper, HYDRATE} from 'next-redux-wrapper';
+import {createSlice} from '@reduxjs/toolkit';
 
 export interface MainState {
-  test: boolean;
+  classic: boolean;
+  aquarell: boolean;
+  gold: boolean;
+  blackAndWhite: boolean;
+  modern: boolean;
 }
 
 const initialState: MainState = {
-  test: true,
+  classic: true,
+  aquarell: false,
+  gold: false,
+  blackAndWhite: false,
+  modern: false,
 }
 
 export const main = createSlice({
@@ -15,7 +21,7 @@ export const main = createSlice({
   initialState,
   reducers: {
     changeTest(state) {
-      state.test = !state.test;
+      // state.test = !state.test;
     },
   },
 });

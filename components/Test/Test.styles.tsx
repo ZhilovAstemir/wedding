@@ -2,11 +2,36 @@ import {styled} from "@mui/system";
 import "@fontsource/playfair-display";
 
 export const StyledMain = styled('main')(({theme}) => ({
-  color: theme.palette.classic.main,
-  fontFamily: theme.palette.classic.fontFamily,
-  background: theme.palette.classic.background,
+  color: theme.palette.gold.main.color,
+  fontFamily: theme.palette.aquarell.fontFamily,
+  background: theme.palette.aquarell.background,
+
+  "& form > input": {
+    border: theme.palette.aquarell.input.border,
+    background: "transparent",
+    outline: "none",
+    textAlign: "center",
+    padding: "10px 20px",
+    borderBottom: "1px solid grey",
+    textTransform: "uppercase",
+    fontSize: "10px",
+    borderRadius: theme.palette.aquarell.input.borderRadius,
+  },
+
+  "& form > select": {
+    border: theme.palette.aquarell.select.border,
+    background: "transparent",
+    outline: "none",
+    textAlign: "center",
+    padding: "10px 20px",
+    borderBottom: "1px solid grey",
+    textTransform: "uppercase",
+    fontSize: "10px",
+    borderRadius: theme.palette.aquarell.select.borderRadius,
+  },
 
   "& .header": {
+    // background: "url(\"../images/aquarell1\")",
     width: "100%",
     display: "flex",
     justifyContent: "center",
@@ -262,27 +287,6 @@ export const StyledMain = styled('main')(({theme}) => ({
     gap: "22px",
   },
 
-  "& form > input": {
-    background: "transparent",
-    outline: "none",
-    border: "none",
-    textAlign: "center",
-    borderBottom: "1px solid grey",
-    textTransform: "uppercase",
-    fontSize: "10px"
-
-  },
-
-  "& form > select": {
-    background: "transparent",
-    outline: "none",
-    border: "none",
-    textAlign: "center",
-    borderBottom: "1px solid grey",
-    textTransform: "uppercase",
-    fontSize: "10px"
-  },
-
   "& form > button": {
     background: "transparent",
     outline: "none",
@@ -297,5 +301,3 @@ export const StyledMain = styled('main')(({theme}) => ({
     cursor: "pointer"
   },
 }));
-
-

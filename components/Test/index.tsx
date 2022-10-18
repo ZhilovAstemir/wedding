@@ -3,8 +3,14 @@ import {memo, useMemo} from "react";
 import {StyledMain} from "./Test.styles";
 import clsx from "clsx";
 import {SubmitHandler, useForm} from "react-hook-form";
-import {SelectChangeEvent} from '@mui/material/Select';
-import {FormControl, InputLabel, MenuItem, Select} from "@mui/material";
+import Head from "next/head";
+import {useAppSelector} from "../../store/hooks";
+import aquarell1 from "../../images/aqua/aquarell1.png";
+import aquarell2 from "../../images/aqua/aquarell2.png";
+import aquarell3 from "../../images/aqua/aquarell3.png";
+import aquarell4 from "../../images/aqua/aquarell4.png";
+import aquarell5 from "../../images/aqua/aquarell5.png";
+import aquarell6 from "../../images/aqua/aquarell6.png";
 
 interface IFormInput {
   name: string;
@@ -13,6 +19,7 @@ interface IFormInput {
 }
 
 const TestComponent = () => {
+  const aquarell = useAppSelector((state) => state.main.aquarell)
   const {register, control, handleSubmit, formState} = useForm<IFormInput>();
 
   const errors = useMemo(
@@ -26,6 +33,16 @@ const TestComponent = () => {
 
   return (
       <StyledMain>
+        <Head>
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link rel="preconnect" href="https://fonts.gstatic.com" />
+              <link
+                  href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap"
+                  rel="stylesheet" />
+        </Head>
+        {/*{aquarell && (*/}
+        {/*    <img src={aquarell1} alt=""/>*/}
+        {/*)}*/}
         <section className="header">
           <h1 className="abbreviation">A&A</h1>
           <hr/>
