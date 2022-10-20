@@ -3,7 +3,7 @@ import "@fontsource/playfair-display";
 
 export const StyledMain = styled('main')(({theme}) => ({
   color: theme.palette.gold.main.color,
-  fontFamily: theme.palette.aquarell.fontFamily,
+  fontFamily: theme.palette.classic.fontFamily,
   background: theme.palette.aquarell.background,
 
   "& form > input": {
@@ -38,7 +38,6 @@ export const StyledMain = styled('main')(({theme}) => ({
     alignCenter: "center",
     flexDirection: "column",
     textAlign: "center",
-    fontFamily: "playfair",
     padding: "20px",
   },
 

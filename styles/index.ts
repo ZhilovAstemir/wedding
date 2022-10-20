@@ -1,6 +1,5 @@
 import {green, purple} from '@mui/material/colors';
 import {createTheme} from "@mui/system";
-import "@fontsource/playfair-display";
 
 export default createTheme({
   palette: {
