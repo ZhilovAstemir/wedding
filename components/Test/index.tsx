@@ -5,12 +5,12 @@ import clsx from "clsx";
 import {SubmitHandler, useForm} from "react-hook-form";
 import {useAppSelector} from "../../store/hooks";
 import Image from 'next/image'
-import aquarell1 from "../../images/aqua/aquarell1.png";
-import aquarell2 from "../../images/aqua/aquarell2.png";
-import aquarell3 from "../../images/aqua/aquarell3.png";
-import aquarell4 from "../../images/aqua/aquarell4.png";
-import aquarell5 from "../../images/aqua/aquarell5.png";
-import aquarell6 from "../../images/aqua/aquarell6.png";
+import aquarell1 from "../../pages/images/aqua/aquarell1.png";
+import aquarell2 from "../../pages/images/aqua/aquarell2.png";
+import aquarell3 from "../../pages/images/aqua/aquarell3.png";
+import aquarell4 from "../../pages/images/aqua/aquarell4.png";
+import aquarell5 from "../../pages/images/aqua/aquarell5.png";
+import aquarell6 from "../../pages/images/aqua/aquarell6.png";
 
 interface IFormInput {
   name: string;
@@ -32,10 +32,7 @@ const TestComponent = () => {
   };
 
   return (
-      <StyledMain>
-        {/* {aquarell && (*/}
-        {/*    <img src={aquarell1} alt=""/>*/}
-        {/*)} */}
+      <StyledMain className="body">
         <Image src="/images/aqua/aquarell1" width={100} height={100} />
         <section className="header">
           <h1 className="abbreviation">A&A</h1>

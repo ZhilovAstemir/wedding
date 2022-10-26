@@ -2,8 +2,8 @@ import {styled} from "@mui/system";
 import "@fontsource/playfair-display";
 
 export const StyledMain = styled('main')(({theme}) => ({
-  color: theme.palette.gold.main.color,
-  fontFamily: theme.palette.classic.fontFamily,
+  color: theme.palette.aquarell.main.color,
+  fontFamily: theme.palette.aquarell.fontFamily,
   background: theme.palette.aquarell.background,
 
   "& form > input": {
@@ -16,6 +16,15 @@ export const StyledMain = styled('main')(({theme}) => ({
     textTransform: "uppercase",
     fontSize: "10px",
     borderRadius: theme.palette.aquarell.input.borderRadius,
+  },
+
+  "& .body" :{
+    maxWidth: "1920px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    margin: "0 auto",
+    marginLeft: "280px",
   },
 
   "& form > select": {
@@ -31,7 +40,6 @@ export const StyledMain = styled('main')(({theme}) => ({
   },
 
   "& .header": {
-    // background: "url(\"../images/aquarell1\")",
     width: "100%",
     display: "flex",
     justifyContent: "center",

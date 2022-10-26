@@ -33,19 +33,26 @@ export default createTheme({
 
     gold: {
       main: {
-        color: "linear-gradient(90deg, #BA6B08 0%, #D29632 11%, #E6B954 22%, #F4D26D 33%, #FCE17C 42%, #FFE681 50%, #FEE27B 61%, #FCD56A 75%, #F8C04E 92%, #F6B53E 100%)",
+        color: "#fff",
+        fontFamily: 'Source Serif Pro',
+      },
+      background: "#1B1B1B"
+    },
+
+    blackAndWhite: {
+      main: {
+        color: "",
+        fontFamily: 'Source Serif Pro',
       },
       background: "#"
     },
 
-    blackAndWhite: {
-      main: purple[500],
-      background: "#"
-    },
-
     modern: {
-      main: purple[500],
-      background: "#"
+      main: {
+        color: "#CBACAC",
+        fontFamily: 'Gilda Display',
+      },
+      background: "#531F1F"
     },
   },
 });
